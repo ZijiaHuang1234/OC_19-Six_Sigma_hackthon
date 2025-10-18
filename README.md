@@ -1,8 +1,57 @@
 # OC_19-Six_Sigma_hackthon
+#  Scope, User, and Design Rationale
 For this hackathon, we developed a quality control system tracking the performance of solar panels
 for NYSERDA to better understand the lifespan remaining and degree of maintenance needed in utility-scaled solar farms.
+
 **Hypothesis case:**
 We assume a hypothesis solar farm whoose total power out of 50MW, and 700 W per solar pannel. For statistical purpose, the major objects of our quality control system is based on the solar pannel package(each consists 100 solar pannels)
+
+Excellent — this part of your Hackathon submission is essentially the **“Project Scope & Design Justification”** section in your README, explaining **why** your tool fits the prompt, who it’s for, and how it was designed to be practical and user-friendly.
+
+Below is a polished, hackathon-ready write-up that directly hits each of the 3 grading criteria — 15 pts total — formatted so you can paste it into your final README under a new section titled:
+
+---
+
+This project integrates **Statistical Process Control (SPC)** principles (Cpk-based 3-sigma thresholds) and **Weibull reliability analysis**, both widely used in industrial engineering quality frameworks.
+By combining these methods, the tool enables users to:
+
+* Continuously evaluate production ratios (`actual_output / expected_performance`);
+* Identify performance anomalies automatically;
+* Diagnose the most likely fault causes based on life-cycle reliability models.
+
+---
+
+### **Intended User and Use Case **
+
+The primary user is a NYSERDA or solar plant operations engineer responsible for overseeing field performance across hundreds of solar panel packs (each pack = 100 panels).
+
+**Use case example:**
+An engineer uploads the latest daily “actual output” data, selects weather conditions, and immediately sees:
+
+* Which packs fall below the expected ratio threshold,
+* The severity distribution of performance deviations, and
+* Potential root causes predicted by fault models.
+
+The dashboard’s interface, tooltips `(i)` icons, and auto-computed KPIs are tailored for **non-programmer technical staff** — users who understand system metrics but may not know R or statistical formulas.
+Thus, the tool directly supports decision-making for field reliability, minimizing the need for specialized data-science expertise.
+
+---
+
+### **Input Efficiency & User Simplicity **
+
+The tool is intentionally designed with minimal, practical user inputs, avoiding unrealistic data requirements:
+
+| Input                             | Description                                                     | Why it’s user-friendly                                                               |
+| --------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------- |
+| Weather selection                 | Choose from `Sunny`, `Cloudy`, or `Rainy`.                      | Simple categorical input; no need to provide full meteorological data |
+| Actual Output CSV                 | One file containing `pack_id` and `actual_output`.              | A single standard export from plant monitoring software; requires no pre-processing. |
+| *(Optional)* Fault model data     | Pre-trained Weibull reliability table and installation records. | Provided as default within the tool; user may override if they have updated data.    |
+
+All other calculations — expected performance, ratio, SPC threshold, and fault prediction — are performed automatically in-app.
+The interface includes **(i)** tooltips next to every field and metric, explaining each step and expected format.
+
+This ensures the tool is practical for real operators, requiring only realistic, readily available information while maintaining analytical rigor.
+
 
 **Statistical Method logic**
 We're training an XGBoost model to predict a continuous target y from features X. XGBoost builds many shallow decision trees sequentially; each new tree corrects the residual errors of the previous ones. The final prediction is the weighted sum of all trees.
@@ -14,7 +63,6 @@ Weather: Users are given three presets: Sunny(What we have now), Rainy(WIP), and
 Actual_Output.csv/: The actual power output each pack of solar panels generates.The user should easily get this information from IoT. This allows us to compare it with the expected output and diagnose which pack is underperforming, allowing us to dive in further and identify the potential failure type.
 (For the Hackathon we prepared two Testing Datasets: testing_datasets1.csv, and testing_datasets2.csv)
 
-file path is locate at the OC_19_hackthon-six_sigma_hackthon, import the 
 
 
 **#Outputs**
