@@ -1,4 +1,4 @@
-pack_id,panel_ids,installation_end_date,time,actual_output_w
+pack_id,panel_ids,installation_end_date,time,actual_output
 1,1-100,2015/8/8,3724,38178.82
 2,101-200,2015/1/19,3925,35716.84
 3,201-300,2014/4/1,4218,35361.11
