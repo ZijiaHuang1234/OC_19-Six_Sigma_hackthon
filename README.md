@@ -14,7 +14,6 @@ Weather: Users are given three presets: Sunny(What we have now), Rainy(WIP), and
 Actual_Output.csv/: The actual power output each pack of solar panels generates.The user should easily get this information from IoT. This allows us to compare it with the expected output and diagnose which pack is underperforming, allowing us to dive in further and identify the potential failure type.
 (For the Hackathon we prepared two Testing Datasets: testing_datasets1.csv, and testing_datasets2.csv)
 
-file path is locate at the OC_19_hackthon-six_sigma_hackthon, import the 
 
 
 **#Outputs**
