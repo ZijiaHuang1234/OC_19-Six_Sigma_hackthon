@@ -1,7 +1,7 @@
 Demonstration Plan
 | File                                        | Purpose                   | Description                                                                    |
 | ------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------ |
-| `testingdataset_with_actual_output.csv`     | User-uploaded test input  | Simulated daily actual output (per Pack_ID).                                   |
+| `testdataset1/2.csv`                        | User-uploaded test input  | Simulated daily actual output (per Pack_ID).                                   |
 | `pv_fault_reliability_table_days.csv`       | Weibull reliability table | Stores parameters for each fault type (`shape_k`, `scale_lambda_days`, etc.).  |(optional for fault prediction)
 | `solar_panel_installations_700x_seq100.csv` | Installation data         | Maps each `pack_id` to its installation date (for elapsed-day fault analysis). |(optional for fault prediction)
 
