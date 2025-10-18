@@ -3,8 +3,10 @@ For this hackathon, we developed a quality control system tracking the performan
 for NYSERDA to better understand the lifespan remaining and degree of maintenance needed in utility-scaled solar farms.
 **Hypothesis case:**
 We assume a hypothesis solar farm whoose total power out of 50MW, and 700 W per solar pannel. For statistical purpose, the major objects of our quality control system is based on the solar pannel package(each consists 100 solar pannels)
+
 **Statistical Method logic**
 We're training an XGBoost model to predict a continuous target y from features X. XGBoost builds many shallow decision trees sequentially; each new tree corrects the residual errors of the previous ones. The final prediction is the weighted sum of all trees.
+<img width="843" height="830" alt="_cgi-bin_mmwebwx-bin_webwxgetmsgimg__ MsgID=1232959916351484610 skey=@crypt_ceb2b87c_d53b82a0a5df8b900ff8ebaf15c35c52 mmweb_appid=wx_webfilehelper" src="https://github.com/user-attachments/assets/93ec8829-dbe2-460d-9d71-1a8cbe22c74e" />
 
 **Your inputs:**
 Weather: Users are given four presets: Sunny(What we have now), Rainy(WIP), Cloudy(WIP), and Snowy(WIP)
