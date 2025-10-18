@@ -10,7 +10,7 @@ Demonstration Plan
 
 Demo Flow
 
-Step 1: Upload & Configure
+**Step 1: Upload & Configure**
 
   Open the Solar Panel Quality Control dashboard (shiny::runApp()).
   
@@ -23,25 +23,25 @@ Step 1: Upload & Configure
   Upload test file testdataset1.csv.(you might need to open and save it to your laptop if it cannot be uploaded)(must include pack_id, actual_output).
   (Optional) Enable Fault Model and upload reliability datasets.
   
-Step 2: Run the Analysis
+**Step 2: Run the Analysis**
   Click Compute ratio (append to history)
   → The app calculates ratio = actual_output / expected_performance.
   Threshold auto-calculates via LCL=max(0,μ−3σ×Cpk​)
   Low-performing packs trigger alerts (ratio < LCL).
   
-Step 3: Visualize Results
+**Step 3: Visualize Results**
   Observe KPI cards:
   Average Ratio, Alerts, Expected vs Actual totals, Threshold (Cpk).
   Adjust Severity filters to focus on underperforming packs.
   View Low Ratio Ranking (Pack_ID) to find the worst performers.
   
-Step 4: Fault Prediction
+**Step 4: Fault Prediction**
   Click any › arrow next to an alert row →
   Opens modal showing possible fault causes:
   Uses Weibull model (from reliability + installation data)
   Or falls back to rule-based engine.
   
-Step 5: Export
+**Step 5: Export**
   Scroll down to Preview (current batch) →
   Review computed ratios and alerts.
   Click Download current batch CSV for archival.
@@ -71,7 +71,7 @@ How Parameters Affect Results
 | **Use AFR prior**      | Applies fault occurrence weighting in Weibull fault scoring.               |
 | **Severity filters**   | Control what subset populates histograms and ranking lists.                |
 
-Visual outputs:
+**Visual outputs:**
 
 KPI cards
 Severity filter controls
