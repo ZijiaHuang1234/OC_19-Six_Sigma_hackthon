@@ -21,7 +21,7 @@ Demo Flow
   Cpk Target: 1.33
   Baseline: “This batch”
   Upload test file testdataset1.csv.(you might need to open and save it to your laptop if it cannot be uploaded)(must include pack_id, actual_output).
-  (Optional) Enable Fault Model and upload reliability datasets.
+  (Optional) Enable Fault Model and upload 2 reliability datasets.
   
 **Step 2: Run the Analysis**
   Click Compute ratio (append to history)
