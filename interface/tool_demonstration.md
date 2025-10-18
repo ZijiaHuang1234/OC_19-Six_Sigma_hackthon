@@ -40,8 +40,8 @@ Step 4: Fault Prediction
   Opens modal showing possible fault causes:
   Uses Weibull model (from reliability + installation data)
   Or falls back to rule-based engine.
+  
 Step 5: Export
-
   Scroll down to Preview (current batch) →
   Review computed ratios and alerts.
   Click Download current batch CSV for archival.
