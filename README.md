@@ -19,6 +19,7 @@ file path is locate at the OC_19_hackthon-six_sigma_hackthon, import the
 
 **#Outputs**
 The ShinyApp takes in weather conditions, using our recursive model to find an expected output from each pack (each contains 100 solar panels). Once it detects certain packs are performing under certain metrics(e.g. less than 85% of the expected output), the app will automatically pops out the following: 
+
 **1) KPI Cards (top right)**
 Average ratio — mean of all pack ratios in the current batch (unitless).
 Panels in alert — number of packs whose ratio is below the current threshold.
@@ -26,15 +27,18 @@ Expected (total, kW) — sum of expected performance across all packs (based on 
 Actual (total, kW) — sum of uploaded actual outputs.
 Current threshold — the alert threshold shown as a percentage.
 Note: tooltips explain whether this comes from Cpk LCL or the fixed 85% fallback.
+
 **2) Severity Filters (affects charts & ranking)**
 Bucket filter — quick ranges: <0.70, 0.70–0.85, 0.85–1.00, >1.00, or All.
 Continuous range — free slider to focus on any ratio interval (default 0–1.5).
 Only alerts — show only packs below the current threshold.
+
 **3) Low Ratio Ranking (Pack_ID)**
 Displays up to Top 20 (filtered) packs in ascending or descending order:
 Worst → Top or Top → Worst.
 Each row shows: Pack_ID, Ratio, Actual, Expected, and Alert/OK.
 Clickable arrow (›) opens a Possible Fault Prediction modal for that pack.
+
 **4) Fault Prediction Modal (per Pack_ID)**
 Header summary: Weather, Ratio, Actual (kW), Expected (kW), Threshold.
 If Weibull datasets are available:
@@ -42,9 +46,11 @@ Top-3 likely faults with confidence (as % of relative probability) and an action
 Timing context: Installation date, Detection date, Elapsed days.
 If datasets are missing:
 Falls back to a rule-based list (e.g., soiling, inverter outage, etc., with suggested actions).
+
 **5) Ratio Distribution (Histogram)**
 Histogram of filtered ratios with a vertical line at the current threshold.
 Useful to visualize how many packs cluster below alert cutoffs.
+
 **6) Preview (current batch)**
 Scrollable 300px panel showing first rows of the computed result table for this run.
 Download current batch CSV button exports the full computed table.
