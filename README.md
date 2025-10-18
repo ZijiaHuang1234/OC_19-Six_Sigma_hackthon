@@ -9,9 +9,9 @@ We're training an XGBoost model to predict a continuous target y from features X
 <img width="843" height="830" alt="_cgi-bin_mmwebwx-bin_webwxgetmsgimg__ MsgID=1232959916351484610 skey=@crypt_ceb2b87c_d53b82a0a5df8b900ff8ebaf15c35c52 mmweb_appid=wx_webfilehelper" src="https://github.com/user-attachments/assets/93ec8829-dbe2-460d-9d71-1a8cbe22c74e" />
 
 **Your inputs:**
-Weather: Users are given four presets: Sunny(What we have now), Rainy(WIP), Cloudy(WIP), and Snowy(WIP)
+Weather: Users are given three presets: Sunny(What we have now), Rainy(WIP), and Cloudy(WIP).
 
-Actual_Output.csv/: The actual power output each pack of solar panels generates. This allows us to compare it with the expected output and diagnose which pack is underperforming, allowing us to dive in further and identify the potential failure type.
+Actual_Output.csv/: The actual power output each pack of solar panels generates.The user should easily get this information from IoT. This allows us to compare it with the expected output and diagnose which pack is underperforming, allowing us to dive in further and identify the potential failure type.
 (For the Hackathon we prepared two Testing Datasets: testing_datasets1.csv, and testing_datasets2.csv)
 
 file path is locate at the OC_19_hackthon-six_sigma_hackthon, import the 
